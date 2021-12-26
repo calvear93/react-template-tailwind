@@ -1,0 +1,120 @@
+{
+    "version": "0.0.1",
+    "project": "<project-name>",
+    "name": "<app-name>",
+    "title": "<app-title>",
+    "description": "<project-description>",
+    "license": "MIT",
+    "private": false,
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/calvear93/react-template"
+    },
+    "author": "Alvear Candia, Cristopher Alejandro <calvear93@gmail.com>",
+    "contributors": [
+        {
+            "name": "Last Name, First Name",
+            "email": "email@domain.com"
+        }
+    ],
+    "keywords": [
+        "react",
+        "redux",
+        "spa",
+        "react-router"
+    ],
+    "scripts": {
+        "start:dev": "env-cmd -e dev,debug -r env/exec/loader.js --verbose craco start --verbose",
+        "start:qa": "env-cmd -e qa,debug  -r env/exec/loader.js craco start",
+        "build:dev": "env-cmd -e dev,build -r env/exec/loader.js --verbose craco build -- --profile",
+        "build:qa": "env-cmd -e qa,build -r env/exec/loader.js craco build",
+        "build:prod": "env-cmd -e prod,build -r env/exec/loader.js craco build",
+        "test:dev": "env-cmd -e dev,test -r env/exec/loader.js --verbose craco test --watchAll=false",
+        "test:qa": "env-cmd -e qa,test -r env/exec/loader.js craco test --watchAll=false",
+        "test:prod": "env-cmd -e prod,test -r env/exec/loader.js craco test --watchAll=false",
+        "test:coverage:dev": "npm run test:dev -- --collectCoverage",
+        "test:coverage:qa": "npm run test:qa -- --collectCoverage",
+        "test:coverage:prod": "npm run test:prod -- --collectCoverage",
+        "lint": "eslint src/**/*.{ts,tsx}",
+        "lint:fix": "eslint --fix src/**/*.{ts,tsx}",
+        "stylelint": "stylelint src/**/*.{css,scss,sass}",
+        "stylelint:fix": "stylelint src/**/*.{css,scss,sass}"
+    },
+    "dependencies": {
+        "@craco/craco": "^6.4.3",
+        "@reduxjs/toolkit": "^1.7.1",
+        "@testing-library/jest-dom": "^5.16.1",
+        "@testing-library/react": "^12.1.2",
+        "@testing-library/user-event": "^13.5.0",
+        "@types/jest": "^27.0.3",
+        "@types/node": "^17.0.5",
+        "@types/react": "^17.0.38",
+        "@types/react-dom": "^17.0.11",
+        "@types/react-redux": "^7.1.21",
+        "@types/redux-logger": "^3.0.9",
+        "@types/testing-library__jest-dom": "^5.14.2",
+        "autoprefixer": "^10.4.0",
+        "axios": "^0.24.0",
+        "clsx": "^1.1.1",
+        "craco-alias": "^3.0.1",
+        "date-fns": "^2.27.0",
+        "env-cmd": "^10.1.0",
+        "http-status-codes": "^2.2.0",
+        "jest": "^27.4.5",
+        "postcss": "^8.4.5",
+        "react": "^17.0.2",
+        "react-dom": "^17.0.2",
+        "react-redux": "^7.2.6",
+        "react-router-dom": "^6.2.1",
+        "react-scripts": "^5.0.0",
+        "redux": "^4.1.2",
+        "redux-logger": "^3.0.6",
+        "sass": "^1.45.1",
+        "store2": "^2.13.1",
+        "tailwindcss": "^3.0.7",
+        "typescript": "^4.5.4"
+    },
+    "devDependencies": {
+        "@typescript-eslint/eslint-plugin": "^5.8.0",
+        "@typescript-eslint/parser": "^5.8.0",
+        "eslint": "^8.5.0",
+        "eslint-config-prettier": "^8.3.0",
+        "eslint-plugin-eslint-comments": "^3.2.0",
+        "eslint-plugin-import": "^2.25.3",
+        "eslint-plugin-jest": "^25.3.0",
+        "eslint-plugin-jest-formatting": "^3.1.0",
+        "eslint-plugin-jsx-a11y": "^6.5.1",
+        "eslint-plugin-prettier": "^4.0.0",
+        "eslint-plugin-promise": "^6.0.0",
+        "eslint-plugin-react": "^7.28.0",
+        "eslint-plugin-react-hooks": "^4.3.0",
+        "eslint-plugin-sonarjs": "^0.11.0",
+        "prettier": "^2.5.1",
+        "stylelint": "^14.2.0",
+        "stylelint-config-css-modules": "^2.3.0",
+        "stylelint-config-rational-order": "^0.1.2",
+        "stylelint-config-recommended": "^6.0.0",
+        "stylelint-config-standard": "^24.0.0",
+        "stylelint-config-standard-scss": "^3.0.0",
+        "stylelint-order": "^5.0.0",
+        "stylelint-scss": "^4.1.0"
+    },
+    "cracoConfig": "webpack.config.js",
+    "browserslist": {
+        "development": [
+            "last 1 chrome version",
+            "last 1 firefox version",
+            "last 1 safari version"
+        ],
+        "production": [
+            ">0.2%",
+            "not dead",
+            "not op_mini all",
+            "not ie <= 10"
+        ]
+    },
+    "engines": {
+        "node": ">=14.0.0 || ^16.13.1",
+        "npm": ">=7.5.6"
+    }
+}

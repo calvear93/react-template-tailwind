@@ -1,0 +1,58 @@
+{
+    "compilerOptions": {
+        "baseUrl": "src",
+        "outDir": "build",
+        "paths": {
+            "@router": ["modules/router"],
+            "@router/*": ["modules/router/*"],
+            "@libs/*": ["modules/libs/*"],
+            "@hooks/*": ["modules/hooks/*"],
+            "@web-font": ["modules/web-font/web-font.scss"]
+        },
+
+        "target": "es6",
+        "module": "commonjs",
+        "moduleResolution": "node",
+        "jsx": "react-jsx",
+        "allowJs": true,
+        "checkJs": true,
+        "declaration": true,
+
+        "lib": ["dom", "dom.iterable", "es2021"],
+        "typeRoots": ["node_modules/@types"],
+
+        "resolveJsonModule": true,
+
+        "incremental": true,
+        "declarationMap": true,
+        "sourceMap": true,
+
+        "removeComments": true,
+        "isolatedModules": true,
+        "esModuleInterop": true,
+        "importHelpers": true,
+        "skipLibCheck": false,
+
+        "strict": true,
+        "strictBindCallApply": true,
+        "strictFunctionTypes": true,
+        "strictNullChecks": true,
+        "strictPropertyInitialization": false,
+        "allowSyntheticDefaultImports": true,
+        "forceConsistentCasingInFileNames": true,
+        "noFallthroughCasesInSwitch": false,
+        "noImplicitAny": true,
+        "noImplicitReturns": true,
+        "noImplicitOverride": true,
+        "noImplicitThis": true,
+        "noUnusedLocals": false,
+        "noUnusedParameters": false,
+        "useUnknownInCatchVariables": true,
+        "exactOptionalPropertyTypes": false,
+
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true
+    },
+    "include": ["src/**/*", "**/*.spec.ts", "**/*.test.ts"],
+    "exclude": ["node_modules", "build", "dist", "env", "deploy"]
+}
